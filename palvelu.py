@@ -9,11 +9,7 @@ def hello_world():
 @app.route("/tulos")
 def nayta_tulos():
     luku1 = request.args.get("luku1")
-    luku2 = request.args.get("luku2")
-    if luku1 and luku2 < 10:
-        try: return "Nöiden lukujen tulo on %s" % (float(luku1) * float(luku2))
-    else:
-        try: return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
+    return try: return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
     except: return "EI"
 
 
