@@ -9,13 +9,16 @@ def hello_world():
 @app.route("/tulos")
 def nayta_tulos():
     luku1 = request.args.get("luku1")
+    luku2 = request.args.get("luku2")
     try: return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
     except: return "EI"
+
 
 
 @app.route("/seikkailu")
 def nayta_laatikko_sivu():
     return """
+        <img src="/static/lataus.jpg">
         <p>laita tähän kaksi jännittävää lukua:
         <form action="/tulos" enctype="application/x-www-urlencoded"> 
         Eka luku: <input name=luku1 type=text> <br>
