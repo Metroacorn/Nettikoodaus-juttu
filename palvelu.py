@@ -9,7 +9,7 @@ def hello_world():
 @app.route("/tulos")
 def nayta_tulos():
     luku1 = request.args.get("luku1")
-    return try: return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
+    try: return "Näiden lukujen summa on %s" % (float(luku1) + float(luku2))
     except: return "EI"
 
 
